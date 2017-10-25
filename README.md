@@ -3,14 +3,30 @@
 This is a git repo
 
 Firs thing: 
+
 * Create a github account 
 
-You all will be added to this repo as readers
-* clone this repo 
+* Fork this repo
+
+* clone the repo from your own github accout 
+```
+	git clone your_repo_address
+
+```
+* check your remote, you should have only one remote origin with your personal username 
+```
+	git remote -v
+```
+* add upstream remote using this address `https://github.com/ViBOT-Erasmus/CAD1-sympy.git`
+```
+	git remote add upstream https://github.com/ViBOT-Erasmus/CAD1-sympy.git
+
+``` 
 
 ##IMPORTANT 
-In each session I will ask you to create a new `.ipynb` file which you will continue work on. Therefore at the end of each session:
-Add your material to your local repo and commit your changes by:
+#### End of each session 
+add and commit your changes using:
+
 * adding :
 ```
 	git add --all
@@ -19,18 +35,29 @@ Add your material to your local repo and commit your changes by:
 ```
 	git add new_file.ipynb
 ```
+
 * commit your changes : 
+
 ```
 	git commit -am 'your message'
 
 ```
-Every time for each session 
-* fetch the repo from origin and rebase your local repo by following :
-```
-	git fetch origin 
+#### Begining of each session 
+Update the remotes to get the new materials 
 
 ```
+	git remote update 
+
+```
+In case there is updates from origin 
+
 ```
 	git rebase origin/master
+
+```
+In case there is updates from upstream 
+
+```
+	git rebase upstream/master
 
 ```
